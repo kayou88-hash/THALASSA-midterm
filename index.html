@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THALASSA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--
+    사용자: 게임 소개 페이지를 확인하는 유저
+    목적: 게임 소개와 사전 예약 페이지를 유저에게 제시
+    핵심 행동: 사전 예약 페이지 선택 유도
+    정보 순서: 소개>기능>방법>세션 설정
+    -->
+  <header>
+  <h1>THALASSA</h1>
+  <p>THALASSA 가상의 게임 사전예약 페이지</p>
+
+  <nav aria-label="주요 메뉴">
+    <a href="#about">게임 소개</a>
+    <a href="#features">게임 설명</a>
+    <a href="#steps">이용 방법</a>
+    <a href="#subscribe">사전예약 소식 받기</a>
+  </nav>
+  </header>
+  
+  <main>
+    <section id="about">
+        
+  <h2>THALASSA</h2>
+  <h3>TITLE</h3>
+
+  <img src="assets/images/title_s.png" alt="게임 타이틀 이미지">
+  <p>'가제'게임 타이틀 BI와 일러스트</p>
+
+  <audio src="assets/Ael Thara Nai.mp3" controls autoplay loop></audio>
+  
+    </section>
+
+    <section id="features">
+ <h2>캐릭터 설명</h2>
+  <div class="tabs" role="tablist" aria-label="기능 선택">
+    
+    <button
+      id="tab-audience"
+      class="tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="feature-audience"
+      data-target="feature-audience">
+      NYRA
+  </button>
+    
+  <button 
+      id="tab-practice"
+      class="tab is-active"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      aria-controls="feature-practice"
+      data-target="feature-practice">
+      NULL_7
+  </button>
+
+
+
+  <button
+      id="tab-feedback"
+      class="tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="feature-feedback"
+      data-target="feature-feedback">
+      SILEX
+  </button>
+
+    <button
+      id="tab-feedback2"
+      class="tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="feature-feedback2"
+      data-target="feature-feedback2">
+      VARKAN
+  </button>
+
+  </div>
+
+  <div
+    id="feature-audience"
+    class="panel"
+    role="tabpanel"
+    aria-labelledby="tab-audience"
+    hidden>
+  <h3>NYRA</h3>
+  <video src="assets/images/nyra_02.mp4" autoplay muted></video>
+  <p> 게임내 캐릭터 직업을 확인할 수 있습니다.</p>
+  </div>
+
+
+  <div
+    id="feature-practice"
+    class="panel is-active"
+    role="tabpanel"
+    aria-labelledby="tab-practice">
+  <h3>NULL_7</h3>
+  <video src="assets/images/null_7_02.mp4" autoplay muted></video>
+  <p> 게임이 세계관을 확인할 수 있습니다.</p>
+  </div>
+
+
+  <div
+    id="feature-feedback"
+    class="panel"
+    role="tabpanel"
+    aria-labelledby="tab-feedback"
+    hidden>
+  <h3>SILEX</h3>
+  <video src="assets/images/silex.mp4" autoplay muted></video>
+  <p> 게임내 캐릭터 직업을 확인할 수 있습니다.</p>
+  </div>
+
+  <div
+    id="feature-feedback2"
+    class="panel"
+    role="tabpanel"
+    aria-labelledby="tab-feedback2"
+    hidden>
+  <h3>VARKAN</h3>
+  <video src="assets/images/varkan.mp4" autoplay muted></video>
+  <p> 게임내 캐릭터 직업을 확인할 수 있습니다.</p>
+  </div>
+
+</section>
+
+ <section id="steps">
+  <h2>이용 방법</h2>
+  <ol>
+    <li>회원가입 및 로그인</li>
+    <li>원하는 캐릭터를 선택합니다.</li>
+    <li>세계관을 선택합니다.</li>
+    <li>튜토리얼을 확인합니다.</li>
+    <li>피드백을 전달합니다.</li>
+  </ol>
+    </section>
+
+    <section id="event-practice">
+      <h2>  사전예약 준비 </h2>
+
+      <div class = "event-grid">
+        <article class="event-card">
+          <h3>화면 테마</h3>
+          <button id="themeButton" type="button">아르카디아 테마</button>
+        </article>
+
+        <article class="event-card">
+          <h3>캐릭터 선점하기</h3>
+          <p>나만의 캐릭터를 미리 선점합니다.</p>
+          <!-- <label for="nickname">캐릭터명</label>
+          <input type="text" id="nickname" maxlength="10">
+          <p id="nicknameCount" aria-live="polite">0 / 10</p> -->
+          <button type="button" id="openReserve">캐릭터 선점하기</button>
+        </article>
+
+        <article class="event-card">
+          <h3>테스트 플레이 피드백 수집 동의</h3>
+          <label class="agree-row">
+            <input type="checkbox" id="agreeCheck">
+            테스트 플레이 피드백 수집에 동의합니다.
+    
+          </label>
+
+          <p id="agreeMessage" aria-live="polite">
+            동의 후 피드백을 작성할 수 있습니다.
+          </p>
+          <button id ="startButton" type="button" disabled>
+            테스트 의견 작성 시작하기
+          </button>
+        </article>
+        
+        
+      </div>
+    </section>
+
+    <dialog id = "recording-dialog" aria-labelledby="recording-title" aria-describedby="recording-description">
+      <h2 id="recording-title">테스트 피드백 작성 안내</h2>
+      <p id = "recording-description">사전에 테스트한 게임의 피드백을 작성할 수 있습니다. 지금은 조건만 설정하여 게임설문은 시작되지 않습니다.</p>
+      <div class = "dialog-actions">
+        <button id="recording-cancel" type="button">돌아가기</button>
+        <button id="recording-confirm" type="button">동의하고 피드백 작성 시작하기</button>
+      </div>
+    </dialog>
+
+    <section id = "training-flow" class="training-flow" hidden>
+      <h2>사전 테스트 피드백</h2>
+      <p class="progress" aria-label="실험 진행 단계">
+        <span class="progress_item">1.캐릭터명</span>
+        <span class="progress_item">2.플레이시간</span>
+        <span class="progress_item">3.확인</span>
+      </p>
+
+      <section class="step" data-step="1" hidden>
+        <h3>게임 테스트에 사용한 캐릭터명을 입력해 주세요.</h3>
+        <label for = "presentation-title">캐릭터명</label>
+        <input id = "presentation-title" type="text" placeholder="예: 김캐릭터" aria-describedby="title-error">
+        <p id="title-error" class="error-message" aria-live="polite"></p>
+        <button id = "title-next" type="button">플레이 시간 선택하기</button>
+      </section>
+
+      <section class="step" data-step="2" hidden>
+        <h3>게임 테스트 플레이에 소요한 시간을 선택해 주세요.</h3>
+        <label for="duration-range">플레이 시간</label>
+        <input id="duration-range" type="range" min="0" max="2" step="1" value="1">
+        <output id="duration-value" for="duration-range">30분</output>
+        <label><input type="checkbox" id="qna-option">로그인 횟수</label>
+        <fieldset id="qna-options" hidden>
+          <legend> 테스트 기간동안 총 로그인 횟수</legend>
+          <label><input type = "radio" name="qna-count" value="1">1회</label>
+          <label><input type = "radio" name="qna-count" value="2" checked>2회</label>
+          <label><input type = "radio" name="qna-count" value="3">3회이상</label>
+        </fieldset>
+        <div class="step-actions">
+          <button id ="option-prev" type="button">이전</button>
+          <button id ="option-next" type="button">내용 확인하기</button>
+        </div>
+      </section>
+
+      <section class="step" data-step="3" hidden>
+        <h3>입력한 내용을 확인해 주세요.</h3>
+        <div class="summary-list">
+          <div><span>캐릭터명</span><strong id="summary-title"></strong></div>
+          <div><span>테스트 시간</span><strong id="summary-duration"></strong></div>
+          <div><span>로그인 횟수</span><strong id="summary-qna"></strong></div>
+        </div>
+        <div class="step-actions">
+          <button id="summary-prev" type="button">수정하기</button>
+          <button id="finish-button" type="button">작성 완료하기</button>
+        </div>
+      </section>
+
+      <section class="step complete-step" data-step="4" hidden>
+        <h3>의견 작성이 완료되었습니다.</h3>
+        <p>설정한 내용을 확인했습니다. 필요하면 다시 작성할 수 있습니다.</p>
+        <button id="restart-button" type="button">다시 작성하기</button>
+      </section>
+
+    </section>
+
+    <section id="subscribe" class="subscribe-card">
+  <h2>사전예약 소식 받기</h2>
+  <form id = "subscribe-form">
+    <label for="email">이메일</label>
+    <input type="email" id="email" name="email">
+    <button id = "subscribeButton" type="submit">사전예약 신청하기</button>
+  </form>
+  <p id = "subscribeMessage" aria-live="polite">
+    이메일을 입력한 뒤 신청해주세요.
+  </p>
+    </section>
+  </main>
+
+  <dialog id ="reserveDialog">
+    <h2>캐릭터 선점하기</h2>
+
+    <!--1단계: 시작지역-->
+    <div class="reserve-step">
+      <h3>1.시작 지역 선택</h3>
+      <select id="reserveRegion">
+        <option value="">지역을 선택하세요.</option>
+        <option value="아르카디아">아르카디아</option>
+        <option value="네레이아">네레이아</option>
+        <option value="에테르">에테르</option>
+      </select>
+    </div>
+
+    <!--2단계 수호캐릭터-->
+    <div class="reserve-step" hidden>
+      <h3>2. 수호 캐릭터 선택</h3>
+      <select id="reserveGuardian">
+        <option value="">캐릭터를 선택하세요.</option>
+        <option value="NYRA">NYRA</option>
+        <option value="NULL_7">NULL_7</option>
+        <option value="SILEX">SILEX</option>
+        <option value="VARKAN">VARKAN</option>
+      </select>
+    </div>
+
+    <!--3단계-->
+    <div class="reserve-step" hidden>
+      <h3>3. 캐릭터명 </h3>
+      <input type="text" id="reserveNickname"
+                  maxlength="10" placeholder="캐릭터명 입력">
+      <p id="reserveNicknameCount">0/10</p>
+
+      <button type="button" id="checkNickname">중복 확인</button>
+      <p id="nicknameMessage" aria-live="polite"></p>
+
+    </div>
+
+    <!--4단계-->
+    <div class="reserve-step" hidden>
+      <h3>4. 선점 정보 확인</h3>
+      <p>시작 지역 : <span id="resultRegion"></span></p>
+      <p>수호 캐릭터 : <span id="resultGuardian"></span></p>
+      <p>캐릭터명 : <span id="resultNickname"></span></p>
+    </div>
+
+    <!--선점완료-->
+    <div class="reserve-step" hidden>
+      <h3>캐릭터 선점 완료</h3>
+      <p>선점이 완료되었습니다.</p>
+
+      <p>시작 지역 : <span id="completeRegion"></span></p>
+      <p>수호 캐릭터 : <span id="completeGuardian"></span></p>
+      <p>캐릭터명 : <span id="completeNickname"></span></p>
+
+      <button type="button" id="cancelReserve">선점 취소하기</button>
+
+    </div>
+
+    <p id="reserveMessage" aria-live="polite"></p>
+
+    <div class="reserve-actions">
+      <button type="button" id="reserveBack">이전</button>
+      <button type="button" id="reserveNext">다음</button>
+      <button type="button" id="reserveClose">닫기</button>
+    </div>
+
+
+  </dialog>
+
+  <footer>
+    <small>@2026 가상의게임 THALASSA 사전예약 페이지</small>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

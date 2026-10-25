@@ -1,0 +1,560 @@
+body{
+    color: #e2e5ff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #000000;
+    text-align: center;
+    
+    background-image: url("assets/images/background_bg02.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header,
+main,
+footer{
+    /*좁은 화면에서도 사용 가능한 너비에 맞춰 줄어듭니다.*/
+    width: 100%;
+
+    /*넓은 화면에서도 콘텐츠는 1100px보다 커지지 않습니다.*/
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 16px;
+}
+
+header { 
+    padding-top: 48px;
+    padding-bottom: 32px;
+}
+
+section {
+    margin-top: 56px;
+    
+}
+
+#steps ol {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+footer{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+nav {
+    display: flex;
+
+    /*메뉴가 들어갈 자리가 부족하면 다음 줄로 이동*/
+    flex-wrap: wrap;
+
+    gap: 24px;
+    margin-top: 24px;
+
+    justify-content: center;
+}
+
+nav a {
+    color: #aeadb4;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h2 {
+    color: #dee0db;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.3;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+p {
+    color: #f7fff7;
+    line-height: 1.7;
+}
+
+
+.features-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+
+    display: grid;
+
+    /*들어갈 수 있는 만큼 열을 만들고, 카드 너비는 최소 260px부터 남은 공간까지 사용*/
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 24px;
+}
+
+.feature-card {
+    min-width: 0;
+    padding: 20px 24px;
+    margin-bottom: 0px;
+    border: 1px solid #1e1e22;
+    border-radius: 12px;
+    background-color: #1a1a1e;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.subscribe-card {
+    padding: 24px;
+    margin-top: 32px;
+    background-color: rgba(30, 20, 39, .6);
+    border: 1px solid #1a1a1e;
+    border-radius: 12px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #b8b7b8;
+    border-radius: 10px;
+
+}
+
+button {
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 10px;
+    color: #ebebff;
+    background-color: #352f9c;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s ease;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+button:hover {
+    background-color: #4b43db;
+}
+
+button:focus,
+input:focus {
+    outline: 3px solid #b9b5ff;
+    outline-offset: 2px;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.event-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.event-card{
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid #2d2e38;
+    border-radius: 12px;
+    background-color: rgba(30, 20, 39, .6);
+}
+
+.event-card label:not(.agree-row){
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.agree-row{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    text-align:left;
+}
+
+.agree-row input{
+    flex: 0 0 auto;
+    width:auto;
+    margin-top: 6px;
+}
+
+#startButton:disabled {
+    color: #ffffff;
+    background-color: #a8a8b2;
+    cursor: not-allowed;
+}
+
+body.dark{
+    color : #f4f4f4;
+    background-color : rgba(170, 161, 178, 0.6);
+
+    background-image: url("assets/images/background_bg01.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+body.dark p,
+body.dark nav a{
+    color: #e1e3de;
+}
+
+body.dark .feature-card,
+body.dark .event-card,
+body.dark .subscribe-card{
+    background-color:   rgba(66, 68, 69, 0.6);
+    border-color: #2d2e38;
+}
+
+#agreeMessage {
+    padding : 12px;
+    border-radius: 10px;
+    background-color: #ecebf2;
+    color: #2d2e38
+}
+
+#agreeMessage.is-ready{
+    color : #245c3a;
+    background-color: #e7f7ed;
+    font-weight: 700;
+}
+
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tab{
+    color : #5b5870;
+    background-color : #1a1a1e;
+    border: 1px solid #deddea;
+}
+
+.tab:hover{
+    color: #ffffff;
+    background-color: #4c4b63;
+}
+
+.tab.is-active{
+    color: #a8a4ff;
+    background-color: #47477e;
+    border-color: #635bff;
+    border-bottom: 4px solid currentcolor;
+    font-weight: 700;
+}
+
+.panel{
+    padding: 8px;
+    border : 1px solid #504d66;
+    border-radius : 12px;
+    background-color : transparent;
+
+}
+
+.panel img,
+.panel video {
+    width : 100%;
+    max-width : 100%;
+    height: 550px;
+    object-fit:cover;
+}
+
+.panel[hidden]{
+    display : none;
+}
+
+body.dark .tab{
+    color: #c3c8c7;
+    background-color: #696962;
+    border-color: #626469;
+}
+
+
+body.dark .tab.is-active{
+    color : #b9b5ff;
+    border-color: #b8b5ff;
+}
+
+body.dark .panel
+{
+    background-color: rgba(66, 68, 69, 0.6);
+    border-color: #ced7e6;
+}
+
+#recording-dialog{
+    width : min(520px, calc(100% - 32px));
+    max-width:none;
+    padding:24px;
+    border:2px solid #deddea;
+    border-radius: 12px;
+    background:#706da1;
+    color: #272322;
+}
+    #recording-dialog::backdrop {background:rgba(30, 20, 39, .6);}
+    #recording-dialog .dialog-action {display:flex; gap:12px; justify-content:flex-end; margin-top:20px;}
+    #recording-dialog button {min-height:44px;}
+    body.dark #recording-dialog {background : #50515f; color: #ffffff;}
+
+    .training-flow{
+        padding:24px;
+        border: 1px solid #555463;
+        border-radius: 24px;
+        background-color: #47477e;
+    }
+    .training-flow[hidden],
+    .training-flow .step[hidden],
+    .training-flow fieldset[hidden] {display: none;}
+    .training-flow .progress {display:flex; flex-wrap:wrap; gap:12px;}
+    .training-flow .progress_item.is-active{
+        color: #92adff;
+        font-weight:800;
+
+    }
+
+    .training-flow .error-message{
+        min-height: 24px;
+        color: #9d243d;
+        font-weight : 700;
+    }
+
+    .training-flow #presentation-title.has-error {border-color: #9d243d;}
+    .training-flow #duration-range {width: 100%; accent-color: #625bff;}
+    .training-flow input [type="checkbox"],
+    .training-flow input [type="radio"] {
+        flex: 0 0 auto;
+        width: auto;
+        accent-color: #535bff;
+    }
+
+    .training-flow .summary-list > div {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 0;
+        border-button:1px solid #deddea;
+    }
+
+    .training-flow .step-actions{
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    body.dark .training-flow{
+        background-color: #50515f;
+        border-color: #2d2e38;
+    }
+
+
+
+
+/*웹페이지가 표시되는 가로 폭이 768px이하일 때만 적용*/
+@media (max-width: 768px){
+    body{
+        font-size : 16px;
+    }
+
+    header{
+        padding-top: 32px;
+        padding-bottom: 24px;
+    }
+
+    section{
+        margin-top: 40px;
+    }
+
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    /*가로 메뉴를 위에서 아래로 배치*/
+    nav{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    nav a{
+        /*링크 글자 주변에도 누를 수 있는 여백 추가*/
+        padding: 8px 0;
+    }
+
+    /*기능 카드를 한 열로 배치*/
+    .features-list{
+        grid-template-columns: 1fr;
+    }
+
+    /*이메일 입력창과 버튼도 한 열로 배치*/
+    form{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input,
+    button{
+        width: 100%;
+    }
+
+    button{
+        /*모바일에서도 버튼의 누르는 영역이 너무 낮아지지않게 설정*/
+        min-height: 48px;
+    }
+
+    .tabs {
+        flex-direction: column;
+        align-item: stretch;
+    }
+
+    .tab{
+        width:100%;
+        text-align: left;
+    }
+
+    .training-flow {padding: 20px;}
+    #recording-dialog .dialog-action {flex-direction: column-reverse;}
+    #recording-dialog .dialog-action button {width: 100%;}
+    .training-flow .step-actions {flex-direction: column-reverse;}
+    .training-flow .step-actions button {width: 100%}
+    .training-flow input[type="checkbox"],
+    .training-flow input[type="radio"] {with:auto;}
+
+    .agree-row {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.agree-row input {
+    width: auto;
+    flex: 0 0 auto;
+
+}
+
+}
+
+    #subscribeMessage{
+        margin-top: 16px;
+        color: #a9a9b2;
+    }
+
+    #subscribeMessage.is-success{
+        color: #245c3a;
+        background-color: #e7f7ed;
+        padding: 12px;
+        border-radius: 10px;
+        font-weight: 700;
+    }
+
+    #subscribeButton:disabled{
+        color: #ffffff;
+        background-color: #a8a8b2;
+        cursor: not-allowed;
+    }
+
+    #reserveDialog {
+        width: min(520px, calc(100% - 32px));
+        max-width:none;
+        padding: 24px;
+        border:2px solid #deddea;
+        border-radius: 12px;
+        background-color: #47477e;
+        color: #ffffff;
+    }
+
+    #reserveDialog::backdrop {
+        background: rgba(30, 20, 39, .6);
+    }
+
+    #reserveDialog h2,
+    #reserveDialog h3,
+    #reserveDialog p {
+        color: #ffffff;
+    }
+
+    #reserveDialog select,
+    #reserveDialog input {
+        width:100%;
+        padding:12px;
+        border: 1px solid #b8b7b8;
+        border-radius: 10px;
+        margin-top:12px;
+        font:inherit;
+    }
+
+    .reserve-step[hidden] {
+        display:none;
+    }
+
+    .reserve-actions { 
+        display: flex;
+        justify-content : flex-end;
+        gap:12px;
+        margin-top:20px;
+    }
+
+    #reserveMessage {
+        color: #ffb7b7;
+    }
+
+    body.dark #reserveDialog {
+        background-color: #50515f;
+        color: #ffffff;
+    }
+
+    body.dark #reserveDialog h2,
+    body.dark #reserveDialog h3,
+    body.dark #reserveDialog p,
+    body.dark #reserveDialog span {
+        color: #ffffff;
+}
+        
+    }
+
+
+
+
+   
+
+
+
+
