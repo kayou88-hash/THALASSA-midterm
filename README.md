@@ -22,5 +22,5 @@
     -관리자,운영자,THALASSA 제외 캐릭터명 작성 유도
 
 ## 프로젝트 주소
-    -GitHub:
-    -배포 페이지:
+    -GitHub : https://github.com/kayou88-hash/THALASSA-midterm.git
+    -배포 페이지 : https://kayou88-hash.github.io/THALASSA-midterm/
